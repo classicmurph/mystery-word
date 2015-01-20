@@ -93,8 +93,14 @@ again and the game begins again if they reply in the positive.
 
 ## Nightmare Mode
 
+**Option 1**:
+
 Use the [PyGame](http://pygame.org/news.html) or [Kivy](http://kivy.org/)
 libraries to make this a graphical experience.
+
+**Option 2**:
+
+Implement the [evil version of this game](http://nifty.stanford.edu/2011/schwarz-evil-hangman/).
 
 ## Notes
 
@@ -108,6 +114,16 @@ is much easier. Try to keep all your logic in _pure functions_ and then have an
 outer crust of functions that talk to the user or read from files surrounding
 your delicious pure function middle. If you are able to do this, you will not
 need to test that outer crust.
+
+### Installing PyGame
+
+PyGame is not a normal library. If you really want to try it, run the
+following:
+
+```sh
+brew install hg sdl sdl_image sdl_mixer sdl_ttf portmidi
+pip install hg+http://bitbucket.org/pygame/pygame
+```
 
 ## Additional Resources
 
