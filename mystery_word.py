@@ -65,13 +65,10 @@ def guess_list():
     return guessed
 
 
-def game_over():
-    play_again = input("You won! Do you want to play again? Y or N ")
-    if play_again == 'y':
-        game_intro()
-        counter = 8
-    else:
-        print("goodbye.")
+# def game_over():
+#     game_over = "The word was {}."format(random_word)
+#     print(game_over)
+
 
 
 counter = 8
@@ -82,8 +79,7 @@ while True:
         guess = input("What's your guess?  ")
         counter_statement = "You have {} guesses left. '\n'".format(counter)
         if len(guess) > 1:
-            guess = input("You can only guess one letter at a time.
-                          Try again.  ")
+            guess = input("You can only guess one letter at a time. ")
         elif guess in random_word:
             correct_guess(guess, revealed)
             display_correct_guesses(guess)
@@ -93,21 +89,15 @@ while True:
             display_correct_guesses(guess)
             print(guessed)
         else:
-            game_over()
             print("You have run out of guesses. The word is {}.".
                   format(random_word))
             break
 
     else:
         if len(random_word) == len(revealed):
-            play_again = input("You won! Do you want to play again? Y or N ")
-            if play_again == 'y':
-                game_intro()
-                counter = 8
-            else:
-                break
+            print("You won!")
+            break
         else:
-            game_over()
             break
 
 # Still accepts non-letters as correct. Replay function not working.
